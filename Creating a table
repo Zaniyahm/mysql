@@ -1,1 +1,8 @@
+CREATE DATABASE InsertDataBase;
+USE InsertDataBase;
 
+CREATE TABLE products(
+id INT,
+p_name VARCHAR(20),
+p_desc VARCHAR(100)
+);
