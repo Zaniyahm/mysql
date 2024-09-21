@@ -1,1 +1,15 @@
 
+CREATE TABLE student_details(
+first_name VARCHAR(25),
+last_name VARCHAR(25),
+roll_no INT,
+email VARCHAR(25),
+grade VARCHAR(5)
+);
+SELECT * FROM student_details;
+INSERT INTO student_details VALUES('Saniya Mary','Jacob', 65,'itzmezaniyah@gmail.com','A');
+INSERT INTO student_details VALUES('Sonia','Jacob', 66,'itzmezoniyaah@gmail.com','A+');
+INSERT INTO student_details VALUES('Annu','Jacob', 67,'itzmeannu@gmail.com','B');
+INSERT INTO student_details VALUES('Tobin','Jacob', 68,'itzmetobinn@gmail.com','C');
+INSERT INTO student_details(first_name,last_name,email) VALUES('Abin Elizabeth','Jacob','abinelzu@gmail.com');
+
