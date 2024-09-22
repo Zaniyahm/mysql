@@ -1,1 +1,22 @@
+CREATE DATABASE details; 
+USE details;
 
+CREATE TABLE computer(
+sl_no INT PRIMARY KEY AUTO_INCREMENT,
+brand VARCHAR(20),
+ram INT,
+processor VARCHAR(20),
+price INT
+);
+
+SELECT * FROM computer;
+
+INSERT INTO computer(brand,ram,processor,price) VALUES('Apple',32,'i9',85000);
+INSERT INTO computer(brand,ram,processor,price) VALUES('Lenovo',16,'i3',35750);
+INSERT INTO computer(brand,ram,processor,price) VALUES('Acer',8,'i5',32300);
+INSERT INTO computer(brand,ram,processor,price) VALUES('Dell',8,'i5',36900);
+INSERT INTO computer(brand,ram,processor,price) VALUES('HP',16,'i5',39500);
+INSERT INTO computer(brand,ram,processor,price) VALUES('Samsung',16,'i5',40100);
+
+SELECT * FROM computer;
+SELECT brand,processor,price FROM computer;
