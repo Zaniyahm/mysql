@@ -1,1 +1,26 @@
+CREATE DATABASE details;
+USE details;
 
+CREATE TABLE student_d(
+sl_no INT PRIMARY KEY AUTO_INCREMENT,
+s_first_name VARCHAR(30),
+s_last_name VARCHAR(30),
+s_age INT
+);
+
+
+INSERT INTO student_d(s_first_name,s_age)  VALUES('Parvathy V', 19);
+INSERT INTO student_d(s_first_name,s_age) VALUES('Catherine Susan', 20);
+INSERT INTO student_d(s_first_name,s_age) VALUES('Neha', 19);
+INSERT INTO student_d(s_first_name,s_age) VALUES('Annmaria', 18);
+INSERT INTO student_d(s_first_name,s_age) VALUES('Gayathri R', 15);
+INSERT INTO student_d(s_first_name,s_age) VALUES('Rahul', 16);
+
+SELECT * FROM student_d;
+SELECT * FROM student_d WHERE s_age=21;
+SELECT * FROM student_d WHERE s_first_name='Parvathy V';
+SELECT * FROM student_d WHERE id=3;
+SELECT * FROM student_d WHERE s_age<18;
+SELECT * FROM student_d WHERE s_age>18;
+
+DROP TABLE student_d;
