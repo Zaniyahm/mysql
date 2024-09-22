@@ -1,0 +1,18 @@
+CREATE DATABASE updateD;
+USE updateD;
+
+CREATE TABLE products(
+id INT PRIMARY KEY AUTO_INCREMENT,
+p_name VARCHAR(20),
+p_price INT
+);
+
+INSERT INTO products(p_name,p_price) VALUES('Jacket', 1000);
+INSERT INTO products(p_name,p_price) VALUES('Trolley', 1200);
+INSERT INTO products(p_name,p_price) VALUES('Bagpack', 800);
+INSERT INTO products(p_name,p_price) VALUES('Pants', 750);
+INSERT INTO products(p_name,p_price) VALUES('Socks', 300);
+INSERT INTO products(p_name,p_price) VALUES('Pants', 900);
+
+SELECT * FROM products;
+UPDATE products SET p_price = 999 where p_name ='Pants';
