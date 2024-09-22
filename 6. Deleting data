@@ -1,0 +1,20 @@
+CREATE DATABASE deleteD;
+USE deleteD;
+
+CREATE TABLE employee(
+id INT PRIMARY KEY AUTO_INCREMENT,
+e_name VARCHAR(20),
+e_salary INT
+);
+
+INSERT INTO employee(e_name,e_salary) VALUES('Employee1',25000);
+INSERT INTO employee(e_name,e_salary) VALUES('Employee2',22000);
+INSERT INTO employee(e_name,e_salary) VALUES('Employee3',23000);
+INSERT INTO employee(e_name,e_salary) VALUES('Employee4',28000);
+INSERT INTO employee(e_name,e_salary) VALUES('Employee5',20000);
+
+SELECT * FROM employee;
+
+DELETE FROM employee WHERE e_name IN('Employee1','Employee2');
+
+TRUNCATE employee;
