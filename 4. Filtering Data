@@ -9,8 +9,8 @@ s_age INT
 );
 
 
-INSERT INTO student_d(s_first_name,s_last_name,s_age)  VALUES('Parvathy V','Nair', 19);
-INSERT INTO student_d(s_first_name,s_last_name,s_age) VALUES('Catherine Susan','Rajesh', 20);
+INSERT INTO student_d(s_first_name,s_last_name,s_age,created)  VALUES('Parvathy V','Nair', 19,now());
+INSERT INTO student_d(s_first_name,s_last_name,s_age,created) VALUES('Catherine Susan','Rajesh', 20,now());
 INSERT INTO student_d(s_first_name,s_last_name,s_age) VALUES('Neha', 'Joshy',19);
 INSERT INTO student_d(s_first_name,s_last_name,s_age) VALUES('Annmaria','Jaison', 18);
 INSERT INTO student_d(s_first_name,s_last_name,s_age) VALUES('Gayathri R','Nair', 15);
@@ -23,6 +23,9 @@ SELECT * FROM student_d WHERE id=3;
 SELECT * FROM student_d WHERE s_age<18;
 SELECT * FROM student_d WHERE s_age>18;
 select concat(s_first_name,' ',s_last_name), s_age from student_d;
+select concat(s_first_name,' ',s_last_name) as Name, s_age from students;
+select distinct s_age from students;
+
 
 
 DROP TABLE student_d;
