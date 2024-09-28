@@ -1,0 +1,27 @@
+
+create table Dept(
+deptID int primary key,
+name varchar(50),
+location varchar(50)
+);
+
+create table Emp(
+empID int primary key,
+firstName varchar(50),
+lastname varchar(50),
+deptID int,
+Salary  varchar(50),
+constraint fk_deptid foreign key(deptID) references Dept(deptID)
+);
+
+insert into Dept values(101,'Inventory','loc1');
+insert into Dept values(102,'Sales','loc2');
+
+insert into Emp values(1,'A','A',101,'10000');
+insert into Emp values(2,'B','B',null,'20000');
+
+select * from Emp;
+select * from Dept;
+
+drop table Emp;
+drop table Dept;
