@@ -1,0 +1,19 @@
+create table UserProfile(
+UserId int unique auto_increment not null,
+firstName varchar(20) not null,
+lastName varchar(20)not null,
+username varchar(20) unique not null,
+password varchar(15),
+email varchar(50) unique not null,
+isActive bit not null default 1,
+islocked bit not null default 0,
+createdOn datetime not null default now(),
+lastUpdatedOn datetime
+);
+
+-- Keys
+-- UserId  - Primary key is the combination of unique and not null
+-- username
+-- email
+
+desc UserProfile;
