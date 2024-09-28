@@ -1,0 +1,20 @@
+CREATE DATABASE order;
+USE order;
+
+
+create table Person (
+name char(50),
+address char(100),
+dob date,
+ownAhouse bit default 0
+);
+
+insert into Person values('A', 'Add1','2005-01-21',1);
+insert into Person values('B', 'Add2','2005-02-21',0);
+insert into Person values('C', 'Add3','2005-03-21',1);
+insert into Person values('D', 'Add4','2005-04-21',1);
+insert into Person(name,address) values('E', 'Add5');
+
+select * from Person;
+select * from Person order by dob asc;
+select * from Person order by ownAhouse,dob;
